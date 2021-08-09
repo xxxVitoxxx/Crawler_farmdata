@@ -42,7 +42,7 @@ def main(variety,i_e):
 
     print('共{}頁資料'.format(max_c))
 
-    with open('./未命名檔案夾/09901_11012_' + variety + '_' + i_e +'.csv','a') as file:
+    with open('./09901_11012_' + variety + '_' + i_e +'.csv','a') as file:
         w = csv.writer(file) 
         w.writerow(['Date','Import and export','Name','Country','Weight','USD','NT'])
     
@@ -62,7 +62,7 @@ def main(variety,i_e):
 
 
 
-        with open('./未命名檔案夾/09901_11012_' + variety + '_' + i_e +'.csv','a',encoding='utf8') as file:
+        with open('./09901_11012_' + variety + '_' + i_e +'.csv','a',encoding='utf8') as file:
                 w = csv.writer(file) 
                 w.writerows(zip(*[iter(td_list)]*8)) 
         driver.find_element_by_xpath('/html/body/div/main/div[2]/div/section[2]/div[2]/div/div/a[2]').click() #下一頁
